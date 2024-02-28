@@ -1,0 +1,25 @@
+image: gitpod/workspace-full
+
+tasks: 
+  - name: init the project
+    init: |
+      node -v
+      pnpm -v
+      pnpm install
+  
+  - name: Test director  
+    command: 
+      cd test
+      pnpm install
+      pnpm run test
+
+  - name: Website directory
+    command: |
+        cd website
+        echo "NEXT_PUBLIC_LIVEBLOCKS_PUBLIC_KEY=$MY_LIVEBLOCKS_KEY" > .env
+        pnpm install
+        pnpm run dev
+
+ports:
+  - port: 3000
+    visibility: public
