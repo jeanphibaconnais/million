@@ -152,6 +152,13 @@ cd website  # Takes you to the website mono-repo
 pnpm run dev
 ```
 
+#### 4. Gitpod 
+
+You can use [Gitpod](https://gitpod.io) to get a workspace configured to contribute on MillionJS.
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/aidenybai/million)
+
+
 [🔝 Back to top](#table-of-content)
 
 ## <span id="contributing-to-the-project">📝 Contributing to the Project</span>

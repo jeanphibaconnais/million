@@ -6,14 +6,17 @@ tasks:
       node -v
       pnpm -v
       pnpm install
+      gp sync-done pnpm-global-install
   
   - name: Test director  
+    init: gp sync-await pnpm-global-install
     command: 
       cd test
       pnpm install
       pnpm run test
 
   - name: Website directory
+    init: gp sync-await pnpm-global-install
     command: |
         cd website
         echo "NEXT_PUBLIC_LIVEBLOCKS_PUBLIC_KEY=$MY_LIVEBLOCKS_KEY" > .env
